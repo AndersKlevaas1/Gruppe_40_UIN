@@ -1,28 +1,32 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { client } from '../sanityClient';
+import './Header.scss';
 
 const Header = () => {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState([]); 
 
   useEffect(() => {
-    client.fetch(`*[_type == "member"]{name, slug}`).then(setMembers);
+    client.fetch(`*[_type == "member"]{name, slug}`).then((data) => {
+      setMembers(data);
+    });
   }, []);
 
   return (
-    <header style={{ padding: '1rem', background: '#333', color: 'white' }}>
+    <header className="header">
       <h1>Gruppe 40</h1>
-      <nav style={{ marginTop: '1rem' }}>
-        <Link to="/" style={{ marginRight: '1rem', color: 'white' }}>Hjem</Link>
-        {members.map((m) => (
-          <Link
-            key={m.slug.current}
-            to={`/medlem/${m.slug.current}`}
-            style={{ marginRight: '1rem', color: 'white' }}
-          >
-            {m.name.split(' ')[0]}
-          </Link>
-        ))}
+      <nav>
+        <Link to="/">Hjem</Link>
+
+        {members.map((member) => {
+          const fornavn = member.name.split(' ')[0]; 
+          const url = `/medlem/${member.slug.current}`; 
+          return (
+            <Link key={member.slug.current} to={url}>
+              {fornavn}
+            </Link>
+          );
+        })}
       </nav>
     </header>
   );
