@@ -7,10 +7,11 @@ const Header = () => {
   const [members, setMembers] = useState([]); 
 
   useEffect(() => {
-    client.fetch(`*[_type == "member"]{name, slug}`).then((data) => {
-      setMembers(data);
-    });
+    setMembers(mockMembers);
   }, []);
+  
+  console.log(members); // Sjekk om dataene kommer inn riktig
+  
 
   return (
     <header className="header">
