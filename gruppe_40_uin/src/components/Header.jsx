@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { client } from '../sanityClient';
+import { mockMembers } from '../mockMembers'; // Bruk mock i stedet for Sanity
 import './Header.scss';
 
 const Header = () => {
