@@ -1,9 +1,17 @@
-import Profilkort from './components/profilkort';
+import Header from './components/header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Profilkort />
-  ); 
+    <Router>
+      <Header />
+      <Routes>
+        {/* Eksempelruter - legg inn når dere er ferdige */}
+        <Route path="/" element={<div>Forside</div>} />
+        <Route path="/medlem/:slug" element={<div>Produktkort</div>} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App; //Jeg må endre på ting her
+export default App;
