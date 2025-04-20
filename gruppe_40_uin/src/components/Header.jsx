@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { mockMembers } from '../mockMembers'; // Bruk mock i stedet for Sanity
+import { client } from '../sanity/client'; //GJorde noen endringer her, skal dobbeltskjekke. Satte stor bookstav i filnavnet fordi jeg trodde det var case sensitivt der og, men skal endre det tilbake. Trenger en pause -Malene
 import './Header.scss';
 
 const Header = () => {
   const [members, setMembers] = useState([]); 
 
   useEffect(() => {
-    setMembers(mockMembers);
+    client.fetch(`*[_type == "member"]{
+      name,
+      slug
+    }`).then((data) => {
+      setMembers(data);
+    }).catch(console.error);
   }, []);
   
-  console.log(members); // Sjekk om dataene kommer inn riktig
-  
-
   return (
     <header className="header">
       <h1>Gruppe 40</h1>

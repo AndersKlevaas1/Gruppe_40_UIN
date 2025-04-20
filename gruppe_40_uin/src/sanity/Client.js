@@ -5,4 +5,4 @@ export const client = SanityClientConstructor({
     dataset: "production",
     apiVersion: "v2025-04-15",
     useCdn: false,
-});  
+}); 

@@ -1,4 +1,4 @@
-export const mockMembers = [
+export const mockMembers = [ //IGNORER DETTE, SKAL FJERNE DET. Måtte bare ha det for å teste om noe funket.
   {
     name: 'Emma Olsen',
     slug: { current: 'emma' },
