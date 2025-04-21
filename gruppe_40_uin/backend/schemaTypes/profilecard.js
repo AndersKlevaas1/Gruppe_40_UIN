@@ -21,7 +21,7 @@ export const profilecard = {
             type: 'slug',
             options: {
                 source: 'name',
-                maxLength: 200, // will be ignored if slugify is set
+                maxLength: 200,
                 slugify: input => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200)
             }
         },
