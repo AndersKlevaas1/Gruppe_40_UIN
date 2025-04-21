@@ -7,7 +7,7 @@ import "./ProfileCard.scss";
 const ProfileCard = ({ profiles }) => {
   return (
     <div className="profilecard-container">
-      <h2>Profilkort</h2>
+      <h2>Gruppemedlemmer</h2>
 
       <div className="profilecard-list">
         {profiles.map((profile, index) => (
