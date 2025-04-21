@@ -25,5 +25,21 @@ export const profilecard = {
                 slugify: input => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200)
             }
         },
+
+        {
+            name: 'log',
+            type: 'array',
+            title: 'Loggføring',
+            of: [
+                {
+                    type: 'object',
+                    fields: [
+                        { name: 'date', type: 'date', title: 'Dato' },
+                        { name: 'entry', type: 'string', title: 'Beskrivelse' },
+                        { name: 'time', type: 'number', title: 'Timer brukt' },
+                    ],
+                },
+            ],
+        }
     ]
 }
