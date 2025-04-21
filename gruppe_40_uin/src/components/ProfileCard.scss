@@ -1,0 +1,32 @@
+.profilecard-container {
+    h2 {
+      margin-bottom: 1rem;
+    }
+  
+    .profilecard-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .profilecard-item {
+      border: 1px solid #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 200px;
+  
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+  
+      h3 {
+        margin: 0.5rem 0 0.25rem;
+      }
+  
+      p {
+        margin: 0;
+      }
+    }
+  }
+  
