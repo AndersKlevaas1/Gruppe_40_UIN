@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { client } from "../sanity/client";
+import  { Link } from "react-router-dom"; // Importer Link fra react-router-dom for navigering
+import { fetchProfileCard } from "../sanity/profilecardServices"; // Importer tjenesten for å hente profilkortdata
 
-const ProfileCard = () => {
-  const [profiles, setProfiles] = useState([]);
-
-  useEffect(() => {
+const ProfileCard = ({profiles}) => {
+  
+  /*useEffect(() => {
     client.fetch(`*[_type == "member"]{
       name,
       slug,
@@ -19,10 +20,13 @@ const ProfileCard = () => {
       setProfiles(data);
     }).catch(console.error);
   }, []);
+  */
 
   return ( //Tenker å endre på det her - malene 
     <div>
       <h2>Profilkort</h2>
+      <div></div>
+
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {profiles.map((profile) => (
           <div key={profile.slug?.current} style={{ border: "1px solid #ccc", padding: "1rem", borderRadius: "8px", width: "200px" }}>
