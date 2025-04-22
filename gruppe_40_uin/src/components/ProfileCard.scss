@@ -1,34 +1,35 @@
 .profilecard-container {
-    h2 {
-      margin-bottom: 1rem;
-      text-align: center;
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .profilecard-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .profilecard-item {
+    border: 1px solid #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 200px;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
     }
-  
-    .profilecard-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
+
+    h3 {
+      margin: 0.5rem 0 0.25rem;
+      color: white;  
     }
-  
-    .profilecard-item {
-      border: 1px solid #ffffff;
-      padding: 1rem;
-      border-radius: 8px;
-      width: 200px;
-  
-      img {
-        width: 100%;
-        border-radius: 8px;
-      }
-  
-      h3 {
-        margin: 0.5rem 0 0.25rem;
-      }
-  
-      p {
-        margin: 0;
-      }
+
+    p {
+      margin: 0;
+      color: white; 
     }
   }
-  
+}

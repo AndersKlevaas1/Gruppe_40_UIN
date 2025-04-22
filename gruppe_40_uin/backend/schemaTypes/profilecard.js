@@ -25,7 +25,6 @@ export const profilecard = {
                 slugify: input => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200)
             }
         },
-
         {
             name: 'log',
             type: 'array',
@@ -40,6 +39,19 @@ export const profilecard = {
                     ],
                 },
             ],
+        },
+        {
+            name: 'interests',
+            type: 'array',
+            title: 'Interesser',
+            of: [{ type: 'string' }],
+            description: 'Liste over personens interesser.'
+        },
+        {
+            name: 'biography',
+            type: 'text',
+            title: 'Biografi',
+            description: 'En kort beskrivelse av personen.'
         }
     ]
 }

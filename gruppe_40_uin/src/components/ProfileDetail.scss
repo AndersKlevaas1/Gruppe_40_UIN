@@ -1,0 +1,60 @@
+.profile-detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  .profile-name {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .profile-biography {
+    margin-bottom: 15px;
+    text-align: left;
+
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 5px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
+
+  .profile-interests {
+    margin-bottom: 15px;
+    text-align: left;
+
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  .profile-email {
+    margin-top: 10px;
+    font-style: italic;
+  }
+}
