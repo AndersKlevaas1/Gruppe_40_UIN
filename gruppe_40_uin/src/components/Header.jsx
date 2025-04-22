@@ -20,10 +20,10 @@ const Header = () => {
       <h1>Gruppe 40</h1>
       <nav>
         <Link to="/">Hjem</Link>
-        <Link to="/">Bjørn</Link>
-        <Link to="/">Malene</Link>
-        <Link to="/">Mohammed</Link>
-        <Link to="/">Andreas</Link>
+        <Link to="/profil/bjorn">Bjørn</Link>
+        <Link to="/profil/malene">Malene</Link>
+        <Link to="/profil/mohammed">Mohammed</Link>
+        <Link to="/profil/andreas">Andreas</Link>
 
         {members.map((member) => {
           const fornavn = member.name.split(' ')[0]; 

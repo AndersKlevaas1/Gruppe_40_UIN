@@ -1,0 +1,25 @@
+.member-log-container {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fafafa;
+  
+
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color:#000000
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 5px;
+      color:#000000;
+    }
+
+  }
+}
